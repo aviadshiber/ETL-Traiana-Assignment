@@ -25,12 +25,14 @@ The solution is a service that pulls the messages from 2 kafka topics, processes
  **Before deploying** - update the property of mongodb *uri* to your mongodb server.  
  replace user,password,host with your own  
   
- --uri=mongodb+srv://<user>:<password>@<host>/test?retryWrites=true&w=majority  
+
+     --uri=mongodb+srv://<user>:<password>@<host>/test?retryWrites=true&w=majority  
+
 The stream file will configure  two streams:  
  1. xml-csv-stream  
  2. mongodb sink  
  
- it will plug them together.  
+ and will plug them together.  
   
   
 *that it!  , just Deploy and enjoy!*
