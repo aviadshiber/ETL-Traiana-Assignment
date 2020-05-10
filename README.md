@@ -17,7 +17,7 @@ The solution is a service that pulls the messages from 2 kafka topics, processes
   use data-flow environment to quick start:  
   [https://github.com/aviadshiber/spring-dataflow-demo](https://github.com/aviadshiber/spring-dataflow-demo)  
     
- - Register the apps as *csv-producer,xml-producer,xml-csv-to-json-converter* accordingly.  
+ - Register the apps as *xml-producer,csv-producer,xml-csv-to-json-converter* accordingly.  
   
    
  ## Loading the stream  
