@@ -1,0 +1,4 @@
+*.jar
+postgres-data
+.idea
+*.iml

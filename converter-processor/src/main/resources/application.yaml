@@ -1,0 +1,24 @@
+
+spring:
+  cloud:
+    stream:
+      kafka:
+        bindings:
+          csv:
+            destination: csv-topic
+            content-type: text/plain
+          csv-to-json:
+            destination: json-topic
+            content-type: application/json
+          xml:
+            destination: xml-topic
+            content-type: text/plain
+          xml-to-json:
+            destination: json-topic
+            content-type: application/json
+        binder:
+          deserializationExceptionHandler: sendToDlq
+          transaction:
+            producer:
+              partition-count: 5
+              compression-type: snappy

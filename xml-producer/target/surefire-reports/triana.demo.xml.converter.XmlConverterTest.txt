@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: triana.demo.xml.converter.XmlConverterTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.664 s - in triana.demo.xml.converter.XmlConverterTest

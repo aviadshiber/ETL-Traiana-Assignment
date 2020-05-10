@@ -1,0 +1,21 @@
+{
+  "date": 1589108567104,
+  "streams": [
+    {
+      "force": false,
+      "name": "triana-stream-to-mongodb",
+      "dslText": ":json-topic > mongodb --management.metrics.export.influx.uri=http://influxdb:8086 --spring.cloud.stream.kafka.streams.binder.zkNodes=zookeeper:2181 --spring.cloud.stream.kafka.streams.binder.brokers=PLAINTEXT://kafka-broker:9092 --management.metrics.export.influx.enabled=true --management.metrics.export.influx.db=myinfluxdb --spring.cloud.stream.kafka.binder.zkNodes=zookeeper:2181 --spring.data.mongodb.database=triana --mongodb.collection=jsons --spring.data.mongodb.uri=mongodb+srv://root:m7MdbFUUHKnKRuwb@aviad-cluster-20gqg.gcp.mongodb.net/test?retryWrites=true&w=majority --spring.cloud.stream.kafka.binder.brokers=PLAINTEXT://kafka-broker:9092",
+      "originalDslText": ":json-topic > mongodb --database=triana --collection=jsons --uri=mongodb+srv://<user>:<password>@<host>/test?retryWrites=true&w=majority",
+      "description": "",
+      "status": "undeployed"
+    },
+    {
+      "force": false,
+      "name": "xml-csv-stream",
+      "dslText": "csv-producer --management.metrics.export.influx.uri=http://influxdb:8086 --spring.cloud.stream.kafka.streams.binder.zkNodes=zookeeper:2181 --management.metrics.export.influx.enabled=true --management.metrics.export.influx.db=myinfluxdb --spring.cloud.stream.kafka.binder.zkNodes=zookeeper:2181 --spring.cloud.stream.kafka.streams.binder.brokers=PLAINTEXT://kafka-broker:9092 --spring.cloud.stream.kafka.binder.brokers=PLAINTEXT://kafka-broker:9092 || xml-producer --management.metrics.export.influx.uri=http://influxdb:8086 --spring.cloud.stream.kafka.streams.binder.zkNodes=zookeeper:2181 --management.metrics.export.influx.enabled=true --management.metrics.export.influx.db=myinfluxdb --spring.cloud.stream.kafka.binder.zkNodes=zookeeper:2181 --spring.cloud.stream.kafka.streams.binder.brokers=PLAINTEXT://kafka-broker:9092 --spring.cloud.stream.kafka.binder.brokers=PLAINTEXT://kafka-broker:9092 || xml-csv-to-json-converter --management.metrics.export.influx.uri=http://influxdb:8086 --spring.cloud.stream.bindings.xml-to-json.destination=json-topic --spring.cloud.stream.bindings.csv-to-json.destination=json-topic --spring.cloud.stream.kafka.streams.binder.zkNodes=zookeeper:2181 --management.metrics.export.influx.enabled=true --management.metrics.export.influx.db=myinfluxdb --spring.cloud.stream.kafka.binder.zkNodes=zookeeper:2181 --spring.cloud.stream.bindings.csv.destination=csv-topic --spring.cloud.stream.bindings.xml.destination=xml-topic --spring.cloud.stream.kafka.streams.binder.brokers=PLAINTEXT://kafka-broker:9092 --spring.cloud.stream.kafka.binder.brokers=PLAINTEXT://kafka-broker:9092",
+      "originalDslText": "csv-producer || xml-producer || xml-csv-to-json-converter",
+      "description": "",
+      "status": "undeployed"
+    }
+  ]
+}
