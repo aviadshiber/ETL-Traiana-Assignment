@@ -1,8 +1,0 @@
-triana\demo\transformers\messages\converters\XmlMessageConverter.class
-triana\demo\transformers\messages\channels\XmlToJsonChannel.class
-triana\demo\transformers\processors\CsvProcessor.class
-triana\demo\transformers\messages\channels\CsvToJsonChannel.class
-triana\demo\transformers\messages\converters\CustomMessageConverter.class
-triana\demo\transformers\processors\XmlProcessor.class
-triana\demo\transformers\ConverterApplication.class
-triana\demo\transformers\messages\converters\CsvMessageConverter.class

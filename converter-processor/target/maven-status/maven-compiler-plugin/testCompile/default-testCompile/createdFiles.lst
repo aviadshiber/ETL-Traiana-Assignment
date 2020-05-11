@@ -1,6 +1,0 @@
-triana\demo\transformers\ConverterApplicationTests.class
-triana\demo\transformers\messages\converters\CsvMessageConverterTest.class
-triana\demo\transformers\consts\ConstUtils.class
-triana\demo\transformers\messages\converters\XmlMessageConverterTest.class
-triana\demo\transformers\processors\CsvProcessorTest.class
-triana\demo\transformers\processors\XmlProcessorTest.class

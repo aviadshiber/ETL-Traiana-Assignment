@@ -1,8 +1,0 @@
-C:\git\triana-streams\converter-processor\src\main\java\triana\demo\transformers\processors\XmlProcessor.java
-C:\git\triana-streams\converter-processor\src\main\java\triana\demo\transformers\messages\converters\CustomMessageConverter.java
-C:\git\triana-streams\converter-processor\src\main\java\triana\demo\transformers\messages\converters\CsvMessageConverter.java
-C:\git\triana-streams\converter-processor\src\main\java\triana\demo\transformers\messages\channels\CsvToJsonChannel.java
-C:\git\triana-streams\converter-processor\src\main\java\triana\demo\transformers\messages\converters\XmlMessageConverter.java
-C:\git\triana-streams\converter-processor\src\main\java\triana\demo\transformers\ConverterApplication.java
-C:\git\triana-streams\converter-processor\src\main\java\triana\demo\transformers\processors\CsvProcessor.java
-C:\git\triana-streams\converter-processor\src\main\java\triana\demo\transformers\messages\channels\XmlToJsonChannel.java
