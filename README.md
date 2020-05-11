@@ -1,11 +1,24 @@
 
 # ETL - Triana assignment  
-The platform is subscribed to multiple data feeds. Each feed is published by a different client to a dedicated Kafka topic.   
-Client 1 uses XML and client 2 uses CSV.   
-XML represent a single message whereas CSV represent multiple messages.   
-The service required should read the messages from the 2 topics and for each message process it, transform to JSON and publish it to a single result topic. In case the message fails to parse, publish it to a kafka topic named “errors” (with the original content + error message).   
-When the message is successfully parsed, transform the content to a JSON object. All input formats should be transformed to a single normalized JSON object.   
-The solution is a service that pulls the messages from 2 kafka topics, processes them and publish a normalized JSON message/error JSON message.  
+
+There are two types of formats that need to be sent to a Kafka message bus , one that is CSV and one is XML.. and maybe in the future other formats, all needed to be transformed to JSON that will be sent back to Kafka.
+
+Also There is another consumer/s that can store the transformed JSON that is stored onto an NOSQL database.
+
+![Diagram of the etl](images/etl.png "ETL Diagram")
+
+I used Spring dataflow & spring cloud streams to implement this.
+I created dummy producers one that generates csv, one that generate an xml - every second,
+They publish it to an output channel that get consumed by a xml-csv-converter processor.
+The xml-csv-converter processor produce to json-topic after transforming the data.
+That json-topic is delegating the JSONS to _mongodb sink_  application (out of the box application).
+
+![triana-stream](images/triana-stream.JPG)
+![mongo-stream](images/mongo-stream.JPG)
+  
+
+this could be replaced with Casandra sink application (out of the box application).
+
   
 ## Components  
   
@@ -17,7 +30,7 @@ The solution is a service that pulls the messages from 2 kafka topics, processes
   use data-flow environment to quick start:  
   [https://github.com/aviadshiber/spring-dataflow-demo](https://github.com/aviadshiber/spring-dataflow-demo)  
     
- - Register the apps as *xml-producer,csv-producer,xml-csv-to-json-converter* accordingly.  
+ - Register the apps as *csv-producer,xml-producer,xml-csv-to-json-converter* accordingly.  
   
    
  ## Loading the stream  
@@ -35,4 +48,4 @@ The stream file will configure  two streams:
  and will plug them together.  
   
   
-*that it!  , just Deploy and enjoy!*
+*that it!   just Deploy and enjoy!*
