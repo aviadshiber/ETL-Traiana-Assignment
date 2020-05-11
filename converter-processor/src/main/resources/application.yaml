@@ -7,12 +7,14 @@ spring:
           csv:
             destination: csv-topic
             content-type: text/plain
+            group: csv-group
           csv-to-json:
             destination: json-topic
             content-type: application/json
           xml:
             destination: xml-topic
             content-type: text/plain
+            group: xml-group
           xml-to-json:
             destination: json-topic
             content-type: application/json
