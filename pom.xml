@@ -24,7 +24,7 @@
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Hoxton.SR4</spring-cloud.version>
-        <docker.org>springcloudstream</docker.org>
+        <docker.org>localhost:5000</docker.org>
         <docker.version>${project.version}</docker.version>
     </properties>
 
@@ -60,6 +60,7 @@
                     <container>
                         <useCurrentTimestamp>true</useCurrentTimestamp>
                     </container>
+                    <allowInsecureRegistries>true</allowInsecureRegistries>
                 </configuration>
             </plugin>
         </plugins>
